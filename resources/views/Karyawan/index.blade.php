@@ -6,16 +6,16 @@
 
     {{-- alert message --}}
     @if ($message = Session::get('success'))
-	  <div class="alert alert-success alert-block">
+	  <div class="alert alert-success" role="alert">
 		<button type="button" class="close" data-dismiss="alert">×</button>	
-		  <strong>{{ $message }}</strong>
+		  {{ $message }}
 	  </div>
 	@endif
 
     @if ($message = Session::get('failed'))
-	  <div class="alert alert-danger alert-block">
+	  <div class="alert alert-danger" role="alert">
 		<button type="button" class="close" data-dismiss="alert">×</button>	
-		  <strong>{{ $message }}</strong>
+		  {{ $message }}
 	  </div>
 	@endif
 

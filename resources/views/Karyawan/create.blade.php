@@ -13,7 +13,7 @@
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" for="name" id="name" required>
+                            <input type="text" class="form-control" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email address</label>
@@ -21,11 +21,11 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Phone</label>
-                            <input type="number" class="form-control" name="phone" placeholder="+62" required>
+                            <input type="number" class="form-control" name="phone" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="team" >
+                            <select class="form-control" id="exampleFormControlSelect1" name="team">
                                 <option value="DS">DS</option>
                                 <option value="IT">IT</option>
                                 <option value="Operational">Operational</option>

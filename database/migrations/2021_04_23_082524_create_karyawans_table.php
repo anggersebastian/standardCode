@@ -16,7 +16,7 @@ class CreateKaryawansTable extends Migration
         Schema::create('karyawans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->bigInteger('phone')->unique();
+            $table->char('phone');
             $table->string('email');
             $table->string('team');
             $table->timestamps();

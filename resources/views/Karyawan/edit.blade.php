@@ -8,15 +8,15 @@
         
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" for="name" id="name" value="{{ $editKaryawan->name }}">
+            <input type="text" class="form-control" name="name" value="{{ $editKaryawan->name }}">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" value="{{ $editKaryawan->email }}">
+            <input type="email" class="form-control" name="email"  value="{{ $editKaryawan->email }}">
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Phone</label>
-            <input type="number" class="form-control" name="phone" id="exampleFormControlInput1" value="{{ $editKaryawan->phone }}">
+            <input type="number" class="form-control" name="phone" value="{{ $editKaryawan->phone }}">
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>

@@ -15,10 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Karyawan
-// Route::get('/karyawan/home', 'KaryawanController@index')->name('karyawan.index');
-// Route::get('/karyawan/create', 'KaryawanController@create')->name('karyawan.create');
-// Route::get('/karyawan/edit', 'KaryawanController@edit')->name('karyawan.edit');
-// Route::post('')
-
 Route::resource('karyawan', 'KaryawanController');
