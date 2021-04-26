@@ -19,8 +19,8 @@
             <input type="number" class="form-control" name="phone" value="{{ $editKaryawan->phone }}">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1" name="team" value="{{ $editKaryawan->team }}">
+            <label>Select Team</label>
+            <select class="form-control" name="team">
                 <option value="DS">DS</option>
                 <option value="IT">IT</option>
                 <option value="Operational">Operational</option>

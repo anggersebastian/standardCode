@@ -16,16 +16,16 @@
                             <input type="text" class="form-control" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Email address</label>
+                            <label>Email address</label>
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Phone</label>
+                            <label>Phone</label>
                             <input type="number" class="form-control" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="team">
+                            <label>Select Team</label>
+                            <select class="form-control" name="team">
                                 <option value="DS">DS</option>
                                 <option value="IT">IT</option>
                                 <option value="Operational">Operational</option>

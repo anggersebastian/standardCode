@@ -6,18 +6,18 @@
 
     {{-- alert message --}}
     @if ($message = Session::get('success'))
-	  <div class="alert alert-success" role="alert">
-		<button type="button" class="close" data-dismiss="alert">×</button>	
-		  {{ $message }}
-	  </div>
-	@endif
+      <div class="alert alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        {{ $message }}
+      </div>
+	  @endif
 
     @if ($message = Session::get('failed'))
-	  <div class="alert alert-danger" role="alert">
-		<button type="button" class="close" data-dismiss="alert">×</button>	
-		  {{ $message }}
-	  </div>
-	@endif
+      <div class="alert alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert">×</button>	
+        {{ $message }}
+      </div>
+	  @endif
 
     {{-- table index --}}
     <table class="table table-hover" style="text-align: center">
