@@ -19,7 +19,7 @@
         <tbody>
             @foreach($getKaryawan as $getKaryawans)
             <tr>
-            <td>{{ $getKaryawans['id'] }}</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $getKaryawans['name'] }}</td>
             <td>{{ $getKaryawans['email'] }}</td>
             <td>{{ $getKaryawans['phone'] }}</td>
@@ -29,7 +29,7 @@
                 <form action="{{ action('KaryawanController@destroy', $getKaryawans['id']) }}" method="post">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="DELETE">
-                <button class="btn btn-danger btn-sm" type="submit">❌ Delete</button>
+                <button class="btn btn-danger btn-sm" type="submit" onclick="return confirm('Are you sure you want to delete this item?');">🗑️ Delete</button>
                 </form>
             </td>
             </tr>

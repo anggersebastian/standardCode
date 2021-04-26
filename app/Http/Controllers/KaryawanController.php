@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Validator\Validator;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Repository\KaryawanRepository;
 
 class KaryawanController extends Controller
@@ -19,40 +19,43 @@ class KaryawanController extends Controller
         return view('Karyawan.index', compact('getKaryawan'));
     }
 
-    // public function create(){
-    //     return view('Karyawan.create');
-    // }
-
     public function edit($id){
-        $karyawan = Karyawan::find($id);
-        return view('Karyawan.edit', compact('Karyawan','id'));
+        $editKaryawan = $this->karyawan->get($id);
+        return view('Karyawan.edit', compact('editKaryawan','id'));
     }
 
     public function store(Request $request){
-        // $request->validate($request, [
-        //     'name' => 'required',
-        //     'email' => 'email',
-        //     'phone' => 'required|max:20',
-        //     'team' => 'required'
-        // ]);
-        
+        $validator = Validator::make($request->all(),
+        [
+            'name' => 'required|max:50',
+            'phone' => 'required|numeric|min:8|max:11',
+            'email' => 'required|email',
+            'team' => 'required'
+        ]
+        );
+
         $this->karyawan->store($request->all());
 
         return redirect()->route('karyawan.index');
     }
 
-    public function update(Request $request, $id){
-        $karyawan = Karyawan::find($id);
-        $karyawan->title = $request->get('title');
-        $karyawan->post = $request->get('post');
-        $karyawan->save();
+    public function update($id, Request $request){
+        $validator = Validator::make($request->all(),
+        [
+            'name' => 'required|max:50',
+            'phone' => 'required|numeric|min:8|max:11',
+            'email' => 'required|email',
+            'team' => 'required'
+        ]
+        );
 
-        return redirect()->route('Karyawan.index');
+        $this->karyawan->update($id, $request->all());
+        
+        return redirect()->route('karyawan.index');
     }
     
     public function destroy($id){
-        $karyawan = Karyawan::find($id);
-        $karyawan->delete();
+        $this->karyawan->destroy($id);
 
         return redirect()->route('karyawan.index');
     }

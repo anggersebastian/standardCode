@@ -9,23 +9,23 @@
             </div>
             <div class="modal-body">
                 <div class="container">
-                    <form method="post" action="{{ route('karyawan.store')}}">
+                    <form action="{{ route('karyawan.store') }}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" for="name" id="name" required>
+                            <input type="text" class="form-control" name="name" for="name" id="name" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email address</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                            <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Phone</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1" required>
+                            <input type="number" class="form-control" name="phone" placeholder="+62" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Example select</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="team" >
                                 <option value="DS">DS</option>
                                 <option value="IT">IT</option>
                                 <option value="Operational">Operational</option>
@@ -33,7 +33,7 @@
                                 <option value="Shipping">Shipping</option>
                             </select>
                         </div>
-                
+
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
                 </div>
