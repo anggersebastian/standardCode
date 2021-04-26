@@ -1,6 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="container">
+    <h3>Data Karyawan</h3><br>
     <form method="POST" action="{{ action('KaryawanController@update', $id) }}">
         {{ method_field('PATCH') }}
         {{ csrf_field() }}

@@ -36,7 +36,7 @@ class KaryawanController extends Controller
 
         $this->karyawan->store($request->all());
 
-        return redirect()->route('karyawan.index');
+        return redirect()->route('karyawan.index')->with(['success' => 'Data Has Been Added !']);
     }
 
     public function update($id, Request $request){
@@ -51,12 +51,12 @@ class KaryawanController extends Controller
 
         $this->karyawan->update($id, $request->all());
         
-        return redirect()->route('karyawan.index');
+        return redirect()->route('karyawan.index')->with(['success' => 'Data Has Been Updated !']);
     }
     
     public function destroy($id){
         $this->karyawan->destroy($id);
 
-        return redirect()->route('karyawan.index');
+        return redirect()->route('karyawan.index')->with(['failed' => 'Data Has Been Deleted']);
     }
 }

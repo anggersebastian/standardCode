@@ -4,6 +4,21 @@
     <h3>Data Karyawan</h3>
     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#createForm">+ Create Karyawan</button><br><br>
 
+    {{-- alert message --}}
+    @if ($message = Session::get('success'))
+	  <div class="alert alert-success alert-block">
+		<button type="button" class="close" data-dismiss="alert">×</button>	
+		  <strong>{{ $message }}</strong>
+	  </div>
+	@endif
+
+    @if ($message = Session::get('failed'))
+	  <div class="alert alert-danger alert-block">
+		<button type="button" class="close" data-dismiss="alert">×</button>	
+		  <strong>{{ $message }}</strong>
+	  </div>
+	@endif
+
     {{-- table index --}}
     <table class="table table-hover" style="text-align: center">
         <thead>
